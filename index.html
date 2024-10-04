@@ -1,19 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Indicador de Jogos</title>
+    <style>
+        .game { display: none; }
+    </style>
 </head>
 <body>
-    
+    <h1>Selecione sua Idade</h1>
+    <input type="file" id="imageUpload" accept="image/*">
+    <br><br>
+    <label for="age">Idade:</label>
+    <input type="number" id="age" min="1" max="25">
+    <button onclick="showGame()">Mostrar Jogo</button>
 
+    <div id="games">
+        <div id="game1" class="game">Jogo 1 (1 a 5 anos): <iframe src="https://scratch.mit.edu/projects/912122835/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div id="game2" class="game">Jogo 2 (6 a 10 anos): <iframe src="https://scratch.mit.edu/projects/17828009/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div id="game3" class="game">Jogo 3 (11 a 15 anos): <iframe src="https://scratch.mit.edu/projects/129230487/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div id="game4" class="game">Jogo 4 (16 a 20 anos): <iframe src="https://scratch.mit.edu/projects/788316485/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div id="game5" class="game">Jogo 5 (21 a 25 anos): <iframe src="https://scratch.mit.edu/projects/1049220990/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+    </div>
 
+    <script>
+        function showGame() {
+            const age = document.getElementById('age').value;
+            const games = document.querySelectorAll('.game');
+            games.forEach(game => game.style.display = 'none');
 
-<h1> bruno.playgames</h1>
-
-
-
-
+            if (age >= 1 && age <= 5) {
+                document.getElementById('game1').style.display = 'block';
+            } else if (age >= 6 && age <= 10) {
+                document.getElementById('game2').style.display = 'block';
+            } else if (age >= 11 && age <= 15) {
+                document.getElementById('game3').style.display = 'block';
+            } else if (age >= 16 && age <= 20) {
+                document.getElementById('game4').style.display = 'block';
+            } else if (age >= 21 && age <= 25) {
+                document.getElementById('game5').style.display = 'block';
+            } else {
+                alert('Idade inválida. Por favor, insira uma idade entre 1 e 25.');
+            }
+        }
+    </script>
 </body>
 </html>
