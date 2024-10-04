@@ -5,23 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicador de Jogos</title>
     <style>
-        .game { display: none; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Cor de fundo suave */
+        }
+        .container {
+            background-color: white; /* Cor de fundo da caixa */
+            padding: 20px;
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            text-align: center; /* Centraliza texto */
+        }
+        .game { 
+            display: none; 
+        }
+        input, button {
+            margin: 10px 0; /* Espaçamento entre os elementos */
+            padding: 10px; /* Preenchimento interno */
+            border: 1px solid #ccc; /* Borda leve */
+            border-radius: 4px; /* Bordas arredondadas */
+            width: 100%; /* Largura total do container */
+            max-width: 300px; /* Largura máxima */
+        }
+        button {
+            background-color: #4CAF50; /* Cor do botão */
+            color: white; /* Cor do texto do botão */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        }
+        button:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
+        }
     </style>
 </head>
 <body>
-    <h1>Selecione sua Idade</h1>
-    <input type="file" id="imageUpload" accept="image/*">
-    <br><br>
-    <label for="age">Idade:</label>
-    <input type="number" id="age" min="1" max="25">
-    <button onclick="showGame()">Mostrar Jogo</button>
+    <div class="container">
+        <h1>Selecione sua Idade</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <br><br>
+        <label for="age">Idade:</label>
+        <input type="number" id="age" min="1" max="25">
+        <button onclick="showGame()">Mostrar Jogo</button>
 
-    <div id="games">
-        <div id="game1" class="game">Jogo 1 (1 a 5 anos): <iframe src="https://scratch.mit.edu/projects/912122835/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-        <div id="game2" class="game">Jogo 2 (6 a 10 anos): <iframe src="https://scratch.mit.edu/projects/17828009/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-        <div id="game3" class="game">Jogo 3 (11 a 15 anos): <iframe src="https://scratch.mit.edu/projects/129230487/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-        <div id="game4" class="game">Jogo 4 (16 a 20 anos): <iframe src="https://scratch.mit.edu/projects/788316485/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
-        <div id="game5" class="game">Jogo 5 (21 a 25 anos): <iframe src="https://scratch.mit.edu/projects/1049220990/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div id="games">
+            <div id="game1" class="game">Jogo 1 (1 a 5 anos): <iframe src="https://scratch.mit.edu/projects/912122835/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+            <div id="game2" class="game">Jogo 2 (6 a 10 anos): <iframe src="https://scratch.mit.edu/projects/17828009/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+            <div id="game3" class="game">Jogo 3 (11 a 15 anos): <iframe src="https://scratch.mit.edu/projects/129230487/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+            <div id="game4" class="game">Jogo 4 (16 a 20 anos): <iframe src="https://scratch.mit.edu/projects/788316485/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+            <div id="game5" class="game">Jogo 5 (21 a 25 anos): <iframe src="https://scratch.mit.edu/projects/1049220990/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        </div>
     </div>
 
     <script>
@@ -47,3 +82,4 @@
     </script>
 </body>
 </html>
+
