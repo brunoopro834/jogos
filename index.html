@@ -73,18 +73,31 @@
       // Função para exibir o jogo com base na idade
       function geraRecomendacao(idade) {
         if (idade == 14) {
-          gameIframe.src = "https://scratch.mit.edu/projects/1051618636/embed";
+          gameIframe.src = "https://scratch.mit.edu/projects/842213543/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade == 15) {
+          gameIframe.src = "https://scratch.mit.edu/projects/1047803861/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
         } else if (idade == 16) {
-          gameIframe.src = "https://scratch.mit.edu/projects/712511942/embed";
+          gameIframe.src = "https://scratch.mit.edu/projects/1082284727";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade == 14) {
+          gameIframe.src = "https://scratch.mit.edu/projects/842213543/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade == 14) {
+          gameIframe.src = "https://scratch.mit.edu/projects/842213543/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
         } else {
           gameIframe.classList.add('hidden');
           statusMessage.textContent = "Em construção";
-        }
+        } 
       }
+        
 
       // Detecta o pressionamento da tecla Enter no campo de idade
       idadeInput.addEventListener('keydown', function(event) {
